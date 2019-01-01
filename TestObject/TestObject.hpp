@@ -72,12 +72,12 @@ namespace my
 			return os;
 		}
 
-		bool operator==(const TestObject& other) { return id == other.id; }
-		bool operator!=(const TestObject& other) { return id != other.id; }
-		bool operator<(const TestObject& other)  { return id < other.id; }
-		bool operator>(const TestObject& other)  { return id > other.id; }
-		bool operator<=(const TestObject& other) { return id <= other.id; }
-		bool operator>=(const TestObject& other) { return id >= other.id; }
+		bool operator==(const TestObject& other) const { return id == other.id; }
+		bool operator!=(const TestObject& other) const { return id != other.id; }
+		bool operator<(const TestObject& other) const { return id < other.id; }
+		bool operator>(const TestObject& other) const { return id > other.id; }
+		bool operator<=(const TestObject& other) const { return id <= other.id; }
+		bool operator>=(const TestObject& other) const { return id >= other.id; }
 
 		std::vector<std::string> getHistory() const { return history; }
 		std::string getStatus() const { return status; }
