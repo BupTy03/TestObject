@@ -2,6 +2,7 @@
 #include"TestObject.hpp"
 
 using namespace std;
+using namespace my;
 
 class Object : public TestObject
 {
@@ -20,6 +21,8 @@ int main(int argc, char** argv)
 		cout << obj2.getParentId() << endl;
 		obj = obj2;
 		cout << obj.getParentId() << endl;
+		cout << obj << endl;
+		cout << obj2 << endl;
 	}
 
 	system("pause");

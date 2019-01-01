@@ -66,6 +66,19 @@ namespace my
 			history.push_back(status);
 		}
 
+		friend std::ostream& operator<<(std::ostream& os, const TestObject& obj)
+		{
+			os << "TestObject{id: " << obj.id << "}"; 
+			return os;
+		}
+
+		bool operator==(const TestObject& other) { return id == other.id; }
+		bool operator!=(const TestObject& other) { return id != other.id; }
+		bool operator<(const TestObject& other)  { return id < other.id; }
+		bool operator>(const TestObject& other)  { return id > other.id; }
+		bool operator<=(const TestObject& other) { return id <= other.id; }
+		bool operator>=(const TestObject& other) { return id >= other.id; }
+
 		std::vector<std::string> getHistory() const { return history; }
 		std::string getStatus() const { return status; }
 		int getId() const { return id; }
