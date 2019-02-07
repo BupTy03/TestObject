@@ -11,7 +11,7 @@ namespace my
 	class TestObject
 	{
 	public:
-		TestObject() : id{ ++counter }, val{ id }
+		TestObject() : id{ ++counter }
 		{
 			std::cout << "[object " << id << "] " << "TestObject::TestObject() (default constructor)" << std::endl;
 			status = "constructed with default constructor";
